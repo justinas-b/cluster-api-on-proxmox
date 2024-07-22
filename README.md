@@ -261,28 +261,28 @@ export PROXMOX_SECRET='11111111-2222-3333-4444-555555555555'                    
 export PROXMOX_SOURCENODE="pve-01"                        # The node that hosts the VM template to be used to provision VMs
 export TEMPLATE_VMID="118"                                # The template VM ID used for cloning VMs
 export ALLOWED_NODES="[pve-01]"                           # The Proxmox VE nodes used for VM deployments
-export VM_SSH_KEYS="ssh-ed25519 ...."                    # The ssh authorized keys used to ssh to the machines.
+export VM_SSH_KEYS="ssh-ed25519 ...."                     # The ssh authorized keys used to ssh to the machines.
 
 ## -- networking configuration-- ##
-export CONTROL_PLANE_ENDPOINT_IP="10.11.1.100"                      # The IP that kube-vip is going to use as a control plane endpoint
-export NODE_IP_RANGES="[10.11.1.101-10.11.1.105]"                   # The IP ranges for Cluster nodes
-export LOAD_BALANCER_RANGES="10.11.1.106-10.11.1.109"               # IP Range for load-balance IP addresses
-export PDNS_ZONE="http://my.dns.zone"                               # Custom DNS zone where ephemeral clusters will provision DNS records (API endpoint)
-export PDNS_API_KEY="*************"                                 # API Key for authentication with DNS zone
-export GATEWAY="10.11.1.1"                                          # The gateway for the machines network-config.
-export IP_PREFIX="24"                                               # Subnet Mask in CIDR notation for your node IP ranges
-export DNS_SERVERS="[10.1.1.10,10.1.1.11]"                          # The dns nameservers for the machines network-config.
-export BRIDGE="vmbr1100"                                            # The network bridge device for Proxmox VE VMs
+export CONTROL_PLANE_ENDPOINT_IP="10.11.1.100"            # The IP that kube-vip is going to use as a control plane endpoint
+export NODE_IP_RANGES="[10.11.1.101-10.11.1.105]"         # The IP ranges for Cluster nodes
+export LOAD_BALANCER_RANGES="10.11.1.106-10.11.1.109"     # IP Range for load-balance IP addresses
+export PDNS_ZONE="http://my.dns.zone"                     # Custom DNS zone where ephemeral clusters will provision DNS records (API endpoint)
+export PDNS_API_KEY="*************"                       # API Key for authentication with DNS zone
+export GATEWAY="10.11.1.1"                                # The gateway for the machines network-config.
+export IP_PREFIX="24"                                     # Subnet Mask in CIDR notation for your node IP ranges
+export DNS_SERVERS="[10.1.1.10,10.1.1.11]"                # The dns nameservers for the machines network-config.
+export BRIDGE="vmbr1100"                                  # The network bridge device for Proxmox VE VMs
 
 ## -- xl nodes -- ##
-export BOOT_VOLUME_DEVICE="scsi0"                                   # The device used for the boot disk.
-export BOOT_VOLUME_SIZE="50"                                        # The size of the boot disk in GB.
-export NUM_SOCKETS="2"                                              # The number of sockets for the VMs.
-export NUM_CORES="1"                                                # The number of cores for the VMs.
-export MEMORY_MIB="4096"                                            # The memory size for the VMs.
+export BOOT_VOLUME_DEVICE="scsi0"                         # The device used for the boot disk.
+export BOOT_VOLUME_SIZE="50"                              # The size of the boot disk in GB.
+export NUM_SOCKETS="2"                                    # The number of sockets for the VMs.
+export NUM_CORES="1"                                      # The number of cores for the VMs.
+export MEMORY_MIB="4096"                                  # The memory size for the VMs.
 
-export EXP_CLUSTER_RESOURCE_SET="true"                              # This enables the ClusterResourceSet feature that we are using to deploy CNI
-export CLUSTER_TOPOLOGY="true"                                      # This enables experimental ClusterClass templating
+export EXP_CLUSTER_RESOURCE_SET="true"                    # This enables the ClusterResourceSet feature that we are using to deploy CNI
+export CLUSTER_TOPOLOGY="true"                            # This enables experimental ClusterClass templating
 
 export POD_CIDR='172.16.0.0/16'
 export SVC_CIDR='192.168.128.0/17'
